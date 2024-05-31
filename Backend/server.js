@@ -10,6 +10,10 @@ require('dotenv').config()
 const app = express()
 app.use(express.json())
 
+app.get("/api", (req,res) => {
+    res.send("<h1> Hello Helmet!!!</h1>")
+})
+
 connectRedis();
 console.log('Connected to Redis');
 
